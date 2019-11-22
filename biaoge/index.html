@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<style>
+			
 			table {
 				margin-top: 50px;
 				border-collapse: collapse;
@@ -21,21 +22,27 @@
 			a {
 				font-family: "楷体";
 				text-decoration: none;
+				color: red;
 			}
 		</style>
 	</head>
 	<body>
-           <h1 style="text-align: center;">Students Information</h3>
-           	<center>Name: <input type="text" id="xingming" />
-           	School number: <input type="number" id="haoma" />
+		
+           <h1 style="text-align: center; color: cornflowerblue">学生信息</h3>
+           	<center>姓名: <input type="text" id="xingming" />
+           	<br>
+           	学号: <input type="number" id="haoma" />
+           	<br>
+           	性别: <input type="text" id="xingbie" />
            	</center>
-           	<input style="position: absolute; margin-left: 1050px; margin-top: -23px; width: 150px;" type="button" value="增加" id="sumbit" onclick="add()" />
+           	<input style="position: absolute; margin-left: 950px; margin-top: -23px; width: 150px; color: red;" type="button" value="增加" id="sumbit" onclick="add()" />
            	<table style="position: absolute; margin-left: 500px;" border="1" id="tab">
 				<tr>
-					<td>Name</td>
-					<td>Number</td>
+					<td>姓名</td>
+					<td>学号</td>
+					<td>性别</td>
 					<td>
-						<a onclick="delete(count)" href=""">删除</a>
+						<a onclick="delete(count) " href=""">删除</a>
 					</td>
 				</tr>
 			</table>
@@ -48,10 +55,12 @@
 				var tab = document.getElementById("tab");
 				var name = document.getElementById("xingming").value;
 				var num = document.getElementById("haoma").value;
+				var xing = document.getElementById("xingbie").value;
 				tab.innerHTML +=
 					"<tr id='" + count + "'>" +
 					"<td>" + name + "</td>" +
 					"<td>" + num + "</td>" +
+					"<td>" + xing + "</td>" +
 					'<td><a href="javascript:delet(' + count + ')">' +
 					"删除" +
 					"</a></td>" +
