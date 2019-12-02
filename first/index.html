@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append("  <b>第一层，阳光充足，可以透过橱窗看到外面的景色。有时候，人们只需发发呆，以一个旁观者的视角看看世界，精神就会得到放松.</b>。");
+  });
+  $("#btn2").click(function(){
+    $("p").append("  <b>因为人的不同，有的人说话吵闹，有的人爱静。为了让更多的人可以在这得到精神的放松，我们开设了第二层。</b>。");
+  });
+});
+ 
+</script>
+		<style>
+			
+			.bg{
+				width: 100%;
+				overflow: hidden;
+			}
+			.wr{
+				margin-top: -500px;
+				margin-left: 300px;
+			}
+			
+			#myDIV {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    color: white;
+    top: 0;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 20s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {top: 500px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {top: 500px;}
+}
+#zp {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    color: white;
+    top: 0;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 10s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {top: 500px; left: 700px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {top: 500px; left: 700px;}
+}
+		
+		</style>
+	</head>
+	<body>
+		
+		<div class="bg">
+			
+			<img src="u=2152407724,2726956192&fm=26&gp=0.jpg" width="100%" style="opacity: 1;" >
+		   
+		<div id="myDIV">
+			<img src="thumb_600_20170508152712_29349.jpg" width="600px" style="opacity: 0.6;" />
+			
+		</div>
+		</div>
+		<div class="wr">
+			 <font color="black" size="5" face="楷体"><p><h1>第一层</h1></p>
+		</font></div>
+		<div id="zp">
+			<img src="u=437904895,1161515712&fm=26&gp=0.jpg" width="600px" style="opacity: 0.6;" />
+		</div>
+		<a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" id="btn1"></a>
+		<a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" id="btn2"></a>
+		<!--<button id="btn1" style="position: absolute; margin-top: -150px;"><img src="click.jpg" width="30px"</button>
+		<button id="btn2" style="position: absolute; margin-top: -100px;"><img src="click.jpg" width="30px"</button>-->
+	</body>
+</html>
